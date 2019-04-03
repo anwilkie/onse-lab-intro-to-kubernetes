@@ -1,20 +1,6 @@
-FROM ubuntu:16.04
+FROM python:3
 
 ENV APP_ROOT=/opt/hello_world
-
-RUN apt-get update && apt-get install -y \
-  apt-utils \
-  build-essential \
-  language-pack-en \
-  lsof \
-  net-tools \
-  python \
-  python-pip \
-  vim
-
-ENV LANG=en_GB.UTF-8
-ENV LANGUAGE=en_GB.UTF-8
-ENV LC_ALL=en_GB.UTF-8
 
 RUN pip install --upgrade pip
 RUN pip install pipenv
